@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electrocasnice Șelimbăr — Demo Humana Tech</title>
+<meta name="description" content="Propunere demo de website pentru Electrocasnice Șelimbăr, realizată de Humana Tech.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--bg:#f8fafc;--brand:#0b5fff;--brand2:#00b3a4;--dark:#0b1220;--radius:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.ribbon{background:#111827;color:#cbd5e1;font-size:12.5px;text-align:center;padding:7px 12px;letter-spacing:.2px}
+.ribbon b{color:#fff;font-weight:600}
+.ph{background:#fff7d6;color:#8a5a00;border:1px dashed #e5b400;border-radius:6px;padding:0 6px;font-weight:600;font-size:.92em;white-space:nowrap}
+.badge{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;padding:4px 9px;border-radius:999px;background:#fff7d6;color:#8a5a00;border:1px solid #f1d27a}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.4px;line-height:1}
+.logo-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:#fff;font-size:15px;font-weight:800;box-shadow:0 6px 18px rgba(11,95,255,.3)}
+.logo-text{display:flex;flex-direction:column}
+.logo-text span:first-child{font-size:17px}
+.logo-text span:last-child{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:2.4px;text-transform:uppercase;margin-top:3px}
+.menu{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:#334155}
+.menu a:hover{color:var(--brand)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:12px;border:1px solid transparent;cursor:pointer;transition:.18s;font-family:inherit;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 22px rgba(11,95,255,.28)}
+.btn-primary:hover{transform:translateY(-1px);background:#0a52dc}
+.btn-wa{background:#25d366;color:#05371b;box-shadow:0 8px 22px rgba(37,211,102,.25)}
+.btn-wa:hover{transform:translateY(-1px)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:#cbd5e1}
+.btn-sm{padding:9px 15px;font-size:14px}
+/* hero */
+.hero{position:relative;background:radial-gradient(1200px 500px at 85% -10%,#e6efff 0,transparent 60%),linear-gradient(#fff,#f6f9ff);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:72px 0 80px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--brand);background:#eaf1ff;padding:6px 12px;border-radius:999px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--brand2);display:inline-block}
+h1{font-size:clamp(34px,5vw,56px);line-height:1.06;letter-spacing:-1.6px;margin:18px 0 18px;font-weight:800}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;color:#475569;max-width:540px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 26px}
+.facts{display:flex;flex-wrap:wrap;gap:20px;font-size:14px;color:#475569}
+.facts div{display:flex;align-items:center;gap:8px}
+.facts svg{width:18px;height:18px;color:var(--brand)}
+.hero-img{position:relative}
+.hero-img img{border-radius:24px;box-shadow:0 30px 60px -20px rgba(15,23,42,.35);aspect-ratio:4/3;object-fit:cover;width:100%}
+.float{position:absolute;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:0 14px 34px rgba(15,23,42,.16);font-size:13.5px;display:flex;align-items:center;gap:10px}
+.float b{display:block;font-size:14.5px}
+.float .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:#e8fbf4;color:#059669}
+.f1{left:-22px;bottom:28px}.f2{right:-14px;top:24px}
+/* sections */
+section{padding:88px 0}
+.sec-head{text-align:center;max-width:660px;margin:0 auto 46px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand2)}
+h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-1px;line-height:1.15;margin:10px 0 12px}
+.sec-head p{color:var(--muted);font-size:17px}
+.alt{background:var(--bg)}
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;transition:.2s}
+.cat:hover{transform:translateY(-3px);box-shadow:0 18px 40px -18px rgba(15,23,42,.25);border-color:#cfe0ff}
+.cat .ico{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#eaf1ff,#e6fbf8);display:grid;place-items:center;color:var(--brand);margin-bottom:16px}
+.cat .ico svg{width:28px;height:28px}
+.cat h3{font-size:17.5px;margin-bottom:6px}
+.cat p{font-size:14.5px;color:var(--muted)}
+/* why */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.card .num{width:42px;height:42px;border-radius:12px;background:var(--dark);color:#fff;display:grid;place-items:center;font-weight:700;margin-bottom:16px}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+/* products */
+.prods{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prod{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.prod .pi{position:relative;background:#f1f3f6;aspect-ratio:1/1;overflow:hidden}
+.prod .pi img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.prod:hover .pi img{transform:scale(1.04)}
+.prod .pi .badge{position:absolute;left:14px;top:14px}
+.prod .pb{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.prod h3{font-size:17.5px}
+.prod ul{list-style:none;font-size:14px;color:var(--muted);display:grid;gap:4px}
+.prod ul li::before{content:"•";color:var(--brand2);margin-right:8px}
+.prod .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}
+.note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:22px}
+/* steps / band */
+.band{background:linear-gradient(135deg,#0b1220,#13223f);color:#fff;border-radius:28px;padding:54px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.band h2{color:#fff}
+.band p{color:#b6c2d9}
+.steps{display:grid;gap:14px}
+.step{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px}
+.step b{width:30px;height:30px;flex:none;border-radius:9px;background:var(--brand2);color:#032b28;display:grid;place-items:center;font-size:14px}
+.step span{font-size:15px;color:#e2e8f0}
+/* form + contact */
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
+form.qf{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 24px 50px -30px rgba(15,23,42,.3)}
+.qf h3{font-size:22px;margin-bottom:4px}
+.qf .sub{color:var(--muted);font-size:14.5px;margin-bottom:20px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label{font-size:13.5px;font-weight:600;color:#334155}
+.field input,.field select,.field textarea{font:inherit;font-size:15px;padding:12px 14px;border:1px solid #d5dde8;border-radius:11px;background:#fbfcfe;transition:.15s;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px rgba(11,95,255,.12);background:#fff}
+.field textarea{min-height:110px;resize:vertical}
+.gdpr{display:flex;gap:10px;font-size:13px;color:var(--muted);margin:4px 0 18px;align-items:flex-start}
+.gdpr input{margin-top:3px}
+.ok{display:none;text-align:center;padding:30px 10px}
+.ok .tick{width:64px;height:64px;border-radius:50%;background:#e8fbf4;color:#059669;display:grid;place-items:center;margin:0 auto 14px}
+.ok h3{margin-bottom:6px}
+.ok p{color:var(--muted)}
+.info{display:grid;gap:14px}
+.irow{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.irow .ii{width:42px;height:42px;flex:none;border-radius:12px;background:#eaf1ff;color:var(--brand);display:grid;place-items:center}
+.irow .ii svg{width:20px;height:20px}
+.irow small{display:block;color:var(--muted);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.8px}
+.irow div b,.irow div a{font-size:15.5px;font-weight:600}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);height:260px}
+.map iframe{width:100%;height:100%;border:0;display:block}
+/* footer */
+footer{background:var(--dark);color:#94a3b8;padding:54px 0 28px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;margin-bottom:34px}
+footer .logo{color:#fff}
+footer h4{color:#fff;font-size:14px;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{color:#fff}
+.fbot{border-top:1px solid #1e293b;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
+.fbot b{color:#cbd5e1}
+/* sticky mobile bar */
+.mbar{display:none}
+@media (max-width:980px){
+ .hero-grid{grid-template-columns:1fr;padding:44px 0 56px;gap:36px}
+ .cats{grid-template-columns:repeat(2,1fr)}
+ .why,.prods{grid-template-columns:1fr 1fr}
+ .band{grid-template-columns:1fr;padding:36px}
+ .contact-grid{grid-template-columns:1fr}
+ .fgrid{grid-template-columns:1fr 1fr}
+ .menu{display:none}
+}
+@media (max-width:620px){
+ .rx{display:none}
+ .hero-grid{padding-top:44px}
+ .hero{padding-top:26px!important}
+ section{padding:64px 0}
+ .wrap{padding:0 18px}
+ .cats{grid-template-columns:1fr 1fr;gap:12px}
+ .cat{padding:18px 16px}
+ .cat p{font-size:13.5px}
+ .why,.prods{grid-template-columns:1fr}
+ .fg{grid-template-columns:1fr;gap:0}
+ .cta .btn{flex:1 1 100%}
+ .float{display:none}
+ .lead{font-size:16.5px}
+ .band{padding:28px 22px;border-radius:22px}
+ form.qf{padding:22px}
+ .fgrid{grid-template-columns:1fr}
+ .nav .btn-sm{display:none}
+ body{padding-bottom:72px}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+ .mbar .btn{padding:12px}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Propunere demo realizată de <b>Humana Tech</b><span class="rx"> · nu este site-ul oficial al firmei · textele între [paranteze] se completează împreună cu clientul</span></div>
+
+<header>
+ <div class="wrap nav">
+  <a href="#" class="logo" aria-label="Electrocasnice Șelimbăr">
+   <span class="logo-mark">ES</span>
+   <span class="logo-text"><span>Electrocasnice</span><span>Șelimbăr</span></span>
+  </a>
+  <nav class="menu">
+   <a href="#categorii">Categorii</a><a href="#de-ce">De ce noi</a><a href="#produse">Produse</a><a href="#contact">Contact</a>
+  </nav>
+  <a href="tel:+40741142733" class="btn btn-primary btn-sm">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+   0741 142 733</a>
+ </div>
+</header>
+
+<section class="hero" style="padding:0">
+ <div class="wrap hero-grid">
+  <div>
+   <span class="eyebrow"><i></i>Magazin de electrocasnice în Șelimbăr, Sibiu</span>
+   <h1>Electrocasnice pentru casa ta, <em>aproape de tine.</em></h1>
+   <p class="lead">Mașini de spălat, frigidere, aragazuri și alte aparate pentru casă. Treci pe la noi pe Strada Mihai Viteazul 198 sau sună-ne și te ajutăm să alegi aparatul potrivit.</p>
+   <div class="cta">
+    <a href="tel:+40741142733" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Sună acum</a>
+    <a href="https://wa.me/40741142733?text=Bun%C4%83%20ziua%2C%20a%C8%99%20dori%20informa%C8%9Bii%20despre%20un%20electrocasnic." target="_blank" rel="noopener" class="btn btn-wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp</a>
+    <a href="#oferta" class="btn btn-ghost">Cere ofertă →</a>
+   </div>
+   <div class="facts">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Str. Mihai Viteazul 198, Șelimbăr</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>L–V 08–18 · Sâm 09–14</div>
+   </div>
+  </div>
+  <div class="hero-img">
+   <img src="img/hero.jpg" alt="Bucătărie modernă cu frigider, mașină de spălat și cuptor (imagine ilustrativă)">
+   <div class="float f1"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Consultanță la alegere</b>Te ajutăm să alegi aparatul potrivit</div></div>
+   <div class="float f2"><span class="ic" style="background:#eaf1ff;color:#0b5fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/></svg></span><div><b>Șelimbăr, Sibiu</b>Magazin local</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="categorii">
+ <div class="wrap">
+  <div class="sec-head"><span class="kicker">Categorii</span><h2>Ce găsești la noi</h2><p>Categoriile de produse cu care lucrăm. Pentru disponibilitate, sună-ne sau scrie-ne pe WhatsApp.</p></div>
+  <div class="cats">
+   <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><circle cx="12" cy="13" r="5"/><path d="M7 6h3"/></svg></div><h3>Mașini de spălat</h3><p>Rufe, cu încărcare frontală sau verticală.</p></div>
+   <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M5 10h14M9 5v2M9 13v3"/></svg></div><h3>Frigidere și congelatoare</h3><p>Combine frigorifice, frigidere și lăzi.</p></div>
+   <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3" width="17" height="18" rx="2.5"/><path d="M3.5 8h17"/><rect x="7" y="11" width="10" height="6.5" rx="1"/><circle cx="7.5" cy="5.5" r=".6"/><circle cx="10.5" cy="5.5" r=".6"/></svg></div><h3>Aragazuri și cuptoare</h3><p>Aragazuri, plite și cuptoare.</p></div>
+   <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><path d="M4 7h16M8 11h8M8 14.5h8M8 18h5"/></svg></div><h3>Mașini de spălat vase</h3><p>Încorporabile sau independente.</p></div>
+   <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><circle cx="12" cy="13" r="5"/><path d="M10 11c1.5 1 2.5 1 4 0M10 15c1.5-1 2.5-1 4 0"/></svg></div><h3>Uscătoare de rufe</h3><p>Pentru casă și apartament.</p></div>
+   <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="13" rx="2"/><rect x="5" y="7.5" width="10" height="8" rx="1"/><path d="M18 8.5v1M18 12v1"/></svg></div><h3>Cuptoare cu microunde</h3><p>Și alte electrocasnice mici.</p></div>
+   <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 13h18v3H3zM6 16v5M18 16v5M5 13l2-8h10l2 8"/></svg></div><h3>Hote</h3><p>Pentru bucătării de toate mărimile.</p></div>
+   <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></div><h3>Alte aparate</h3><p><span class="ph">[Alte categorii]</span></p></div>
+  </div>
+  <p class="note">Lista finală de categorii se stabilește împreună cu magazinul.</p>
+ </div>
+</section>
+
+<section id="de-ce" class="alt">
+ <div class="wrap">
+  <div class="sec-head"><span class="kicker">De ce noi</span><h2>Simplu, local, direct</h2><p>Fără drumuri inutile: întrebi, vezi produsul, alegi.</p></div>
+  <div class="why">
+   <div class="card"><div class="num">01</div><h3>Consultanță la alegere</h3><p>Ne spui ce spațiu ai și ce nevoi ai, iar noi te ajutăm să alegi aparatul potrivit.</p></div>
+   <div class="card"><div class="num">02</div><h3>Magazin local în Șelimbăr</h3><p>Ne găsești pe Strada Mihai Viteazul 198, ușor de ajuns din Sibiu și din împrejurimi.</p></div>
+   <div class="card"><div class="num">03</div><h3>Răspuns rapid pe WhatsApp</h3><p>Trimite-ne un mesaj cu ce cauți și revenim cu variantele disponibile.</p></div>
+   <div class="card"><div class="num">04</div><h3>Vezi produsul înainte</h3><p>Treci pe la magazin și vezi aparatul pe viu înainte să te decizi.</p></div>
+   <div class="card"><div class="num">05</div><h3>Livrare</h3><p><span class="ph">[Livrare: da/nu, zone, cost]</span></p></div>
+   <div class="card"><div class="num">06</div><h3>Garanție</h3><p><span class="ph">[Garanție: condiții și durată]</span></p></div>
+  </div>
+ </div>
+</section>
+
+<section id="produse">
+ <div class="wrap">
+  <div class="sec-head"><span class="kicker">Produse</span><h2>Cum ar arăta produsele pe site</h2><p>Carduri de exemplu: aici vor apărea produsele reale ale magazinului, cu poze, detalii și preț.</p></div>
+  <div class="prods">
+   <article class="prod"><div class="pi"><img src="img/washer.jpg" alt="Mașină de spălat (imagine exemplu)"><span class="badge">Exemplu</span></div><div class="pb"><h3>Mașină de spălat rufe</h3><ul><li>Capacitate: <span class="ph">[kg]</span></li><li>Marcă / model: <span class="ph">[Marcă]</span></li><li>Stare: <span class="ph">[Nou / Second-hand]</span></li></ul><div class="row"><span class="ph">[Preț]</span><a href="https://wa.me/40741142733?text=Bun%C4%83%20ziua%2C%20m%C4%83%20intereseaz%C4%83%20o%20ma%C8%99in%C4%83%20de%20sp%C4%83lat." target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Întreabă</a></div></div></article>
+   <article class="prod"><div class="pi"><img src="img/fridge.jpg" alt="Frigider (imagine exemplu)"><span class="badge">Exemplu</span></div><div class="pb"><h3>Combină frigorifică</h3><ul><li>Volum: <span class="ph">[litri]</span></li><li>Marcă / model: <span class="ph">[Marcă]</span></li><li>Stare: <span class="ph">[Nou / Second-hand]</span></li></ul><div class="row"><span class="ph">[Preț]</span><a href="https://wa.me/40741142733?text=Bun%C4%83%20ziua%2C%20m%C4%83%20intereseaz%C4%83%20un%20frigider." target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Întreabă</a></div></div></article>
+   <article class="prod"><div class="pi"><img src="img/cooker.jpg" alt="Aragaz (imagine exemplu)"><span class="badge">Exemplu</span></div><div class="pb"><h3>Aragaz cu cuptor</h3><ul><li>Tip: <span class="ph">[Gaz / Electric / Mixt]</span></li><li>Marcă / model: <span class="ph">[Marcă]</span></li><li>Stare: <span class="ph">[Nou / Second-hand]</span></li></ul><div class="row"><span class="ph">[Preț]</span><a href="https://wa.me/40741142733?text=Bun%C4%83%20ziua%2C%20m%C4%83%20intereseaz%C4%83%20un%20aragaz." target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Întreabă</a></div></div></article>
+  </div>
+  <p class="note">Imaginile și produsele sunt exemple ilustrative, nu stocul real al magazinului.</p>
+ </div>
+</section>
+
+<section class="alt" style="padding-top:40px;padding-bottom:40px">
+ <div class="wrap">
+  <div class="band">
+   <div><span class="kicker" style="color:#5eead4">Cum cumperi</span><h2>3 pași simpli</h2><p>Ne spui ce cauți, îți confirmăm variantele disponibile și vii să vezi produsul.</p></div>
+   <div class="steps">
+    <div class="step"><b>1</b><span>Sună-ne, scrie-ne pe WhatsApp sau completează formularul de ofertă.</span></div>
+    <div class="step"><b>2</b><span>Îți confirmăm ce avem disponibil și răspundem la întrebări.</span></div>
+    <div class="step"><b>3</b><span>Treci pe la magazin în Șelimbăr.<br><span class="ph">[Sau livrare, dacă e cazul]</span></span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <div class="sec-head" id="oferta"><span class="kicker">Cere ofertă</span><h2>Spune-ne ce cauți</h2><p>Completează formularul și te contactăm noi. Sau sună direct la 0741 142 733.</p></div>
+  <div class="contact-grid">
+   <form class="qf" id="qf" novalidate>
+    <div id="qf-body">
+     <h3>Cerere de ofertă</h3><p class="sub">Durează mai puțin de un minut.</p>
+     <div class="fg">
+      <div class="field"><label for="n">Nume</label><input id="n" name="nume" required placeholder="Numele tău"></div>
+      <div class="field"><label for="t">Telefon</label><input id="t" name="telefon" type="tel" required placeholder="07xx xxx xxx"></div>
+     </div>
+     <div class="fg">
+      <div class="field"><label for="c">Categorie</label><select id="c" name="categorie"><option>Mașină de spălat</option><option>Frigider / congelator</option><option>Aragaz / cuptor</option><option>Mașină de spălat vase</option><option>Uscător de rufe</option><option>Altceva</option></select></div>
+      <div class="field"><label for="b">Buget orientativ</label><select id="b" name="buget"><option>Nu știu încă</option><option>Sub 1.000 lei</option><option>1.000 – 2.500 lei</option><option>Peste 2.500 lei</option></select></div>
+     </div>
+     <div class="field"><label for="m">Ce cauți?</label><textarea id="m" name="mesaj" placeholder="Ex: mașină de spălat de 7–8 kg, pentru apartament"></textarea></div>
+     <label class="gdpr"><input type="checkbox" required id="g"><span>Sunt de acord să fiu contactat în legătură cu această cerere. <span class="ph">[Link politică de confidențialitate]</span></span></label>
+     <button class="btn btn-primary" style="width:100%" type="submit">Trimite cererea</button>
+     <p id="err" style="display:none;color:#dc2626;font-size:13.5px;margin-top:10px;text-align:center">Completează numele, telefonul și bifează acordul.</p>
+    </div>
+    <div class="ok" id="ok">
+     <div class="tick"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg></div>
+     <h3>Mulțumim! Cererea a fost trimisă.</h3>
+     <p>Te contactăm în cel mai scurt timp.</p>
+     <p style="font-size:12.5px;margin-top:14px"><span class="badge">Demo</span> În această versiune demo formularul nu trimite date.</p>
+    </div>
+   </form>
+   <div class="info">
+    <div class="irow"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><small>Telefon / WhatsApp</small><a href="tel:+40741142733">+40 741 142 733</a></div></div>
+    <div class="irow"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Adresă</small><b>Strada Mihai Viteazul 198, 557260 Șelimbăr, jud. Sibiu</b><br><span style="font-size:13px;color:#64748b">Plus code: Q59R+CM Șelimbăr · <a style="font-size:13px;color:#0b5fff" href="https://www.google.com/maps/search/?api=1&query=Strada%20Mihai%20Viteazul%20198%2C%20557260%20%C8%98elimb%C4%83r" target="_blank" rel="noopener">Deschide în Google Maps</a></span></div></div>
+    <div class="irow"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small>Program</small><b>Luni–Vineri: 08:00–18:00</b><br><b>Sâmbătă: 09:00–14:00</b><br><b>Duminică: închis</b></div></div>
+    <div class="irow"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span><div><small>Email</small><b><span class="ph">[Email]</span></b></div></div>
+    <div class="irow"><span class="ii"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v1.9H8v3.2h2.6V22H14v-10.3h2.6l.4-3.2z"/></svg></span><div><small>Facebook</small><a href="https://www.facebook.com/people/Electrocasnice-Selimbar/100091442915852/" target="_blank" rel="noopener">Electrocasnice Selimbar</a></div></div>
+    <div class="map"><iframe title="Hartă Electrocasnice Șelimbăr" src="https://maps.google.com/maps?q=Strada%20Mihai%20Viteazul%20198%2C%20557260%20%C8%98elimb%C4%83r%2C%20Rom%C3%A2nia&z=16&output=embed"></iframe></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="fgrid">
+   <div><a href="#" class="logo"><span class="logo-mark">ES</span><span class="logo-text"><span>Electrocasnice</span><span style="color:#94a3b8">Șelimbăr</span></span></a><p style="margin-top:14px;max-width:320px">Electrocasnice pentru casa ta, în Șelimbăr, jud. Sibiu.</p></div>
+   <div><h4>Navigare</h4><ul><li><a href="#categorii">Categorii</a></li><li><a href="#de-ce">De ce noi</a></li><li><a href="#produse">Produse</a></li><li><a href="#oferta">Cere ofertă</a></li></ul></div>
+   <div><h4>Contact</h4><ul><li><a href="tel:+40741142733">+40 741 142 733</a></li><li>Str. Mihai Viteazul 198, Șelimbăr</li><li><a href="https://www.facebook.com/people/Electrocasnice-Selimbar/100091442915852/" target="_blank" rel="noopener">Facebook</a></li><li><span class="ph">[Date firmă: denumire, CUI]</span></li></ul></div>
+  </div>
+  <div class="fbot"><span>© 2026 Electrocasnice Șelimbăr · <span class="ph">[ANPC / SOL]</span></span><span>Propunere demo realizată de <b>Humana Tech</b></span></div>
+ </div>
+</footer>
+
+<div class="mbar">
+ <a href="tel:+40741142733" class="btn btn-primary">Sună acum</a>
+ <a href="https://wa.me/40741142733" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp</a>
+</div>
+
+<script>
+document.getElementById('qf').addEventListener('submit',function(e){
+ e.preventDefault();
+ var n=document.getElementById('n').value.trim(),t=document.getElementById('t').value.trim(),g=document.getElementById('g').checked;
+ if(!n||!t||!g){document.getElementById('err').style.display='block';return;}
+ document.getElementById('qf-body').style.display='none';document.getElementById('ok').style.display='block';
+});
+</script>
+</body>
+</html>
